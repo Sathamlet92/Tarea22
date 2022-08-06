@@ -4,8 +4,10 @@ public class Limpieza extends Producto {
     private String components;
     private double liter;
     public Limpieza(){}
-    public Limpieza(String name , double price) {
+    public Limpieza(String name, double price, double liter, String components) {
         super(name, price);
+        this.liter = liter;
+        this.components = components;
     }
 
     public String getComponents() {
@@ -22,5 +24,10 @@ public class Limpieza extends Producto {
 
     public void setLiter(double liter) {
         this.liter = liter;
+    }
+    public String toString() {
+        return super.toString()
+                +"\nComponenetes: " + this.getComponents()
+                +"\nLitros: " + this.getLiter();
     }
 }

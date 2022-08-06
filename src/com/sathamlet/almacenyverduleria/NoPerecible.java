@@ -25,4 +25,9 @@ public class NoPerecible extends Producto {
     public void setCalories(int calories) {
         this.calories = calories;
     }
+    public String toString() {
+        return super.toString()
+                +"\nContenido: " + this.getContent()
+                +"\nCalorias: " + this.getCalories();
+    }
 }
